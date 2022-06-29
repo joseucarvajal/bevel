@@ -18,10 +18,10 @@ spec:
       name: {{ name }}-restserver
       port: {{ peer_restserver_port }}
       localmspid: {{ name }}MSP
-      image: {{ network.container_registry.url | lower }}/bevel-supplychain-fabric:rest-server-latest
-      username: user1
-      cert_path: "/secret/tls/user1.cert"
-      key_path: "/secret/tls/user1.pem"
+      image: {{ network.container_registry.url | lower }}/supplychain_fabric:rest_server_latest
+      username: admin
+      cert_path: "/secret/tls/admin.cert"
+      key_path: "/secret/tls/admin.pem"
     storage:
       storageclassname: {{ name }}sc
       storagesize: 512Mi
